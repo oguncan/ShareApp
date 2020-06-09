@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserInfoActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Kullanıcı Bilgisi"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgUserInfoProfilePhoto"
+        android:layout_width="120dp"
+        android:src="@drawable/ic_visible"
+
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/txtUserInfoSelectPhoto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Fotoğraf Seç"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgUserInfoProfilePhoto" />
+
+    <Button
+        android:id="@+id/btnUserInfoNextButton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/btn_round"
+        android:text="İleri"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Kullanıcı Adı"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/btnUserInfoNextButton" />
+
+    <TextView
+        android:id="@+id/txtViewEditProfileUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorLightGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewEditProfileUsername" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="E-posta Adresi"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtViewEditProfileUsername"
+        app:layout_constraintStart_toStartOf="@+id/txtViewEditProfileUsername"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewEditProfileUsername" />
+
+    <TextView
+        android:id="@+id/txtViewEditProfileEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorLightGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewEditProfileEmail" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtUserInfoSelectPhoto"
+        app:layout_constraintStart_toStartOf="@+id/txtUserInfoSelectPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/txtUserInfoSelectPhoto">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtTextUserInfoName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ad ve Soyad" />
+    </com.google.android.material.textfield.TextInputLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

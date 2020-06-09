@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+
+            app:toolbarId="@+id/toolbar">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorLightGrey"
+                app:contentInsetStart="0dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imgEditProfileClose"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+
+                        android:src="@drawable/ic_close"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+
+                        android:text="Profili Düzenle"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgEditProfileClose"
+                        app:layout_constraintStart_toEndOf="@+id/imgEditProfileClose"
+                        app:layout_constraintTop_toTopOf="@+id/imgEditProfileClose" />
+
+                    <ImageView
+                        android:id="@+id/imgEditProfileDone"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:src="@drawable/ic_done"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@color/colorPrimaryDark"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+
+
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".Profile.ProfileEditFragment">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgProfilePhoto"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_person"
+                app:civ_border_color="@color/colorPrimaryDark"
+                app:civ_border_width="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtEditProfileChangePhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Fotoğrafı Değiştir"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/imgProfilePhoto"
+                app:layout_constraintStart_toStartOf="@+id/imgProfilePhoto"
+                app:layout_constraintTop_toBottomOf="@+id/imgProfilePhoto" />
+
+            <TextView
+                android:id="@+id/txtEditProfileName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="Ad ve Soyad"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtEditProfileChangePhoto" />
+
+            <EditText
+                android:id="@+id/edtTextEditProfileName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/colorAccent"
+                android:ems="10"
+                android:hint="Ad ve Soyad"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/txtEditProfileName"
+                app:layout_constraintStart_toStartOf="@+id/txtEditProfileName"
+                app:layout_constraintTop_toBottomOf="@+id/txtEditProfileName" />
+
+            <TextView
+                android:id="@+id/txtEditProfileUsername"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Kullanıcı Adı"
+                app:layout_constraintEnd_toEndOf="@+id/edtTextEditProfileName"
+                app:layout_constraintStart_toStartOf="@+id/edtTextEditProfileName"
+                app:layout_constraintTop_toBottomOf="@+id/edtTextEditProfileName" />
+
+            <EditText
+                android:id="@+id/edtTextProfileEditUsername"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/colorAccent"
+                android:ems="10"
+                android:hint="Kullanıcı Adı"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/txtEditProfileUsername"
+                app:layout_constraintStart_toStartOf="@+id/txtEditProfileUsername"
+                app:layout_constraintTop_toBottomOf="@+id/txtEditProfileUsername" />
+
+            <TextView
+                android:id="@+id/txtEditProfileEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Mail Adresi"
+                app:layout_constraintEnd_toEndOf="@+id/edtTextProfileEditUsername"
+                app:layout_constraintStart_toStartOf="@+id/edtTextProfileEditUsername"
+                app:layout_constraintTop_toBottomOf="@+id/edtTextProfileEditUsername" />
+
+            <EditText
+                android:id="@+id/edtTextProfileEditEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/colorAccent"
+                android:ems="10"
+                android:hint="Mail Adresi"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/txtEditProfileEmail"
+                app:layout_constraintStart_toStartOf="@+id/txtEditProfileEmail"
+                app:layout_constraintTop_toBottomOf="@+id/txtEditProfileEmail" />
+
+            <Button
+                android:id="@+id/btnLogOut"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="108dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/btn_round"
+                android:text="ÇIKIŞ YAP"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtTextProfileEditEmail" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

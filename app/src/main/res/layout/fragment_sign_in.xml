@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.SignInFragment">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:text="Giriş Yap"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputLayoutSignInUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtTextSignInUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Kullanıcı Adı" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputLayoutSignInPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="@+id/txtInputLayoutSignInUsername"
+        app:layout_constraintStart_toStartOf="@+id/txtInputLayoutSignInUsername"
+        app:layout_constraintTop_toBottomOf="@+id/txtInputLayoutSignInUsername">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtTextSignInPassword"
+            android:layout_width="match_parent"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content"
+            android:hint="Şifre" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkBoxSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Beni Hatırla"
+        app:layout_constraintStart_toStartOf="@+id/txtInputLayoutSignInPassword"
+        app:layout_constraintTop_toBottomOf="@+id/txtInputLayoutSignInPassword" />
+
+    <TextView
+        android:id="@+id/txtViewSignInForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Şifreni mi unuttun?"
+        app:layout_constraintEnd_toEndOf="@+id/txtInputLayoutSignInPassword"
+        app:layout_constraintTop_toBottomOf="@+id/txtInputLayoutSignInPassword" />
+
+    <Button
+        android:id="@+id/btnSignInNextButton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn_round"
+        android:text="Giriş Yap"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtInputLayoutSignInPassword"
+        app:layout_constraintStart_toStartOf="@+id/txtInputLayoutSignInPassword"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxSignIn" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginBottom="64dp"
+        android:text="Hesabınız yok mu?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtViewSignInRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="64dp"
+        android:text="Kayıt Ol."
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
